@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+  --cor01: ;
+  --cor02: ;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background: black url(app/images/background\ 900x675.webp) no-repeat scroll;
+  background-size: cover;
+}

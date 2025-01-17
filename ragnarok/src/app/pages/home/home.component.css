@@ -1,0 +1,97 @@
+#server-info{
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.850);
+}
+
+#server-info > h3{
+  font-weight: bold;
+}
+
+#server-container{
+  display: flex;
+  padding-top: 30px;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#status{
+  height: 400px;
+  width: 420px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#status-foto{
+  background: url(../../images/server-info\ 429x793.webp) no-repeat;
+  background-size: cover;
+  height: 380px;
+  width: 200px;
+  align-content: space-between;
+  flex: 0 1 auto;
+}
+
+#status-info{
+  flex: 0 1 auto;
+
+  font-weight: bold;
+}
+
+span{
+  color: yellowgreen;
+  font-weight: bold;
+}
+
+#main-info{
+  text-align: left;
+  flex: 0 1 auto;
+}
+
+#total-users{
+  font-weight: bold;
+  flex: 0 1 auto;
+}
+
+#welcome{
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.850);
+}
+
+#welcome > h3{
+  font-weight: bold;
+}
+
+#welcome-container{
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  height: 500px;
+
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#welcome-info{
+  flex: 0 1 400px;
+
+  text-align: justify;
+  align-self: center;
+}
+
+#welcome-foto{
+  background: url(../../images/welcome-foto.png) no-repeat;
+  background-size: cover;
+  height: 470px;
+  width: 400px;
+
+  flex: 0 1 auto;
+}
+
+#welcome-events{
+  flex: 0 1 400px;
+
+  text-align: justify;
+  align-self: center;
+}
