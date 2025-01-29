@@ -1,5 +1,49 @@
-footer{
-  position: relative;
-  margin-top: auto;
-  bottom: 0px;
+/* Estilo básico da página para empurrar o footer para baixo */
+html, body {
+  height: 100%; /* Garante que o corpo ocupe toda a altura da janela */
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column; /* Layout em coluna para empurrar o footer */
+  min-height: 100vh; /* Garante que o container ocupe toda a altura da tela */
+}
+
+.content-wrap {
+  flex: 1; /* Faz com que o conteúdo principal ocupe o espaço disponível */
+}
+
+footer {
+  background-color: #343a40c4; /* Cor de fundo escura */
+  color: #ffffff; /* Cor do texto */
+  padding: 20px 0; /* Espaçamento interno */
+  text-align: center; /* Alinhamento central */
+}
+
+footer .nav {
+  padding: 0;
+  list-style: none; /* Remove o estilo padrão da lista */
+  margin-bottom: 10px;
+}
+
+footer .nav-item {
+  display: inline-block; /* Coloca os itens em linha */
+  margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+footer .nav-link {
+  color: #ffffff; /* Cor dos links */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Efeito suave no hover */
+}
+
+footer .nav-link:hover {
+  color: #f8d210; /* Cor amarela ao passar o mouse */
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem; /* Texto menor para o rodapé */
 }

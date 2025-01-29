@@ -1,97 +1,115 @@
-#server-info{
+#banner{
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* Estilo da seção #server-info */
+#server-info {
   margin: auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.850);
+  background-color: rgba(255, 255, 255, 0.85); /* Mantém transparência */
+  padding: 20px; /* Adiciona um pouco de espaçamento interno */
 }
 
-#server-info > h3{
+#server-info > h3 {
   font-weight: bold;
+  font-size: 1.8rem; /* Aumenta o tamanho do título */
+  color: #333; /* Torna a cor do título mais visível */
 }
 
-#server-container{
+#server-container {
   display: flex;
   padding-top: 30px;
   margin: auto;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  gap: 20px; /* Adiciona espaçamento uniforme entre os elementos */
 }
 
-#status{
+/* Estilo do status */
+#status {
   height: 400px;
   width: 420px;
   display: flex;
-  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#status-foto{
-  background: url(../../images/server-info\ 429x793.webp) no-repeat;
+#status-foto {
+  background: url(../../images/server-info\ 429x793.webp) no-repeat center center;
   background-size: cover;
   height: 380px;
   width: 200px;
-  align-content: space-between;
-  flex: 0 1 auto;
 }
 
-#status-info{
-  flex: 0 1 auto;
-
+#status-info {
   font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
-span{
+span {
   color: yellowgreen;
   font-weight: bold;
 }
 
-#main-info{
+/* Estilo das informações principais */
+#main-info {
   text-align: left;
   flex: 0 1 auto;
+  max-width: 400px;
+  padding: 10px;
 }
 
-#total-users{
+#total-users {
   font-weight: bold;
+  text-align: center;
   flex: 0 1 auto;
+  max-width: 400px;
 }
 
-#welcome{
+/* Estilo da seção #welcome */
+#welcome {
   margin: auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.850);
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
 }
 
-#welcome > h3{
+#welcome > h3 {
   font-weight: bold;
+  font-size: 1.8rem;
+  color: #333;
 }
 
-#welcome-container{
+#welcome-container {
   display: flex;
-  margin: auto;
-  margin-top: 30px;
-  height: 500px;
-
   flex-flow: row wrap;
   justify-content: space-evenly;
+  margin: auto;
+  margin-top: 30px;
+  gap: 20px; /* Adiciona espaço entre os elementos */
 }
 
-#welcome-info{
+#welcome-info {
   flex: 0 1 400px;
-
   text-align: justify;
   align-self: center;
+  padding: 10px;
 }
 
-#welcome-foto{
-  background: url(../../images/welcome-foto.png) no-repeat;
+#welcome-foto {
+  background: url(../../images/welcome-foto.png) no-repeat center center;
   background-size: cover;
   height: 470px;
   width: 400px;
-
   flex: 0 1 auto;
 }
 
-#welcome-events{
+#welcome-events {
   flex: 0 1 400px;
-
   text-align: justify;
   align-self: center;
+  padding: 10px;
 }

@@ -1,0 +1,130 @@
+<div class="background-container">
+  <div class="content-wrapper">
+    <div class="form-container">
+      <!-- Cabeçalho -->
+      <header class="form-header">
+        <h1>Cadastro</h1>
+        <p>Preencha o formulário abaixo para criar sua conta</p>
+      </header>
+
+      <!-- Formulário -->
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form" aria-label="Formulário de Cadastro">
+        <div class="form-group">
+          <label for="username">Nome de usuário</label>
+          <input
+            id="username"
+            formControlName="username"
+            type="text"
+            placeholder="Digite seu nome de usuário"
+            aria-required="true"
+          />
+          <div
+            *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched"
+            class="error-message"
+          >
+            Nome de usuário é obrigatório e deve ter pelo menos 4 caracteres.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input
+            id="password"
+            formControlName="password"
+            type="password"
+            placeholder="Digite sua senha"
+            aria-required="true"
+          />
+          <div
+            *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched"
+            class="error-message"
+          >
+            A senha é obrigatória e deve ter pelo menos 8 caracteres.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirmar Senha</label>
+          <input
+            id="confirmPassword"
+            formControlName="confirmPassword"
+            type="password"
+            placeholder="Digite sua senha novamente"
+            aria-required="true"
+          />
+          <div
+            *ngIf="registerForm.controls['confirmPassword'].invalid && registerForm.controls['confirmPassword'].touched"
+            class="error-message"
+          >
+            A confirmação de senha é obrigatória.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            formControlName="email"
+            type="email"
+            placeholder="Digite seu e-mail"
+            aria-required="true"
+          />
+          <div
+            *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched"
+            class="error-message"
+          >
+            Por favor, digite um e-mail válido.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmEmail">Confirmar E-mail</label>
+          <input
+            id="confirmEmail"
+            formControlName="confirmEmail"
+            type="email"
+            placeholder="Digite seu e-mail novamente"
+            aria-required="true"
+          />
+          <div
+            *ngIf="registerForm.controls['confirmEmail'].invalid && registerForm.controls['confirmEmail'].touched"
+            class="error-message"
+          >
+            A confirmação de e-mail é obrigatória.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gênero</label>
+          <select id="gender" formControlName="gender" aria-required="true">
+            <option value="">Selecione o gênero</option>
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="birthDate">Data de Nascimento</label>
+          <div class="birthdate-selects">
+            <select id="birthDay" formControlName="birthDay" aria-label="Dia">
+              <option value="">Dia</option>
+              <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+            </select>
+            <select id="birthMonth" formControlName="birthMonth" aria-label="Mês">
+              <option value="">Mês</option>
+              <option *ngFor="let month of months" [value]="month.value">{{ month.label }}</option>
+            </select>
+            <select id="birthYear" formControlName="birthYear" aria-label="Ano">
+              <option value="">Ano</option>
+              <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,29 +1,103 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto"> <!-- Adicionado mx-auto para centralizar -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="/home" routerLinkActive="active" id="dropdownMenu1">
+          MAIN
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/home" routerLinkActive="active">HOME</a>
+          <a class="dropdown-item" href="#">NEWS</a>
+          <a class="dropdown-item" href="#">DOWNLOADS</a>
+          <a class="dropdown-item" href="#">RULES</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu2">
+          ACCOUNT
+        </a>
+        <div class="dropdown-menu">
+          <form action="/login" method="POST">
+            <!-- Campo de Login -->
+            <div class="mb-3">
+              <label for="login" class="form-label">Login</label>
+              <input type="text" class="form-control" id="login" name="login" placeholder="Digite seu login" required>
+            </div>
+
+            <!-- Campo de Senha -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <!-- Link para Recuperar Senha -->
+            <div class="mt-2 text-center">
+              <a href="" class="text-decoration-none">Esqueceu a senha?</a>
+            </div>
+
+            <!-- Botão Entrar -->
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+
+            <!-- Botão para Registrar -->
+            <div class="d-grid gap-2 mt-2">
+              <button type="button" class="btn btn-secondary" routerLink="/register" routerLinkActive="active">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu3">
+          DONATION
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">PURCHASE</a>
+          <a class="dropdown-item" href="#">DONATE</a>
+        </div>
+      </li>
+      <li class="nav-item destaque">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Servidor</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu4">
+          INFORMATION
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">SERVER INFO</a>
+          <a class="dropdown-item" href="#">SERVER STATUS</a>
+          <a class="dropdown-item" href="#">WOE HOURS</a>
+          <a class="dropdown-item" href="#">CASTLES</a>
+          <a class="dropdown-item" href="#">WHO'S ONLINE</a>
+          <a class="dropdown-item" href="#">MAP STATICS</a>
+          <a class="dropdown-item" href="#">RANKING INFO</a>
+          <a class="dropdown-item" href="#">VENDING INFO</a>
+          <a class="dropdown-item" href="#">BUYINGSTORE</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu4">
+          DATABASE
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">ITEM DATABASE</a>
+          <a class="dropdown-item" href="#">MOB DATABASE</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu4">
+          SOCIAL
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">FACEBOOK</a>
+          <a class="dropdown-item" href="#">INSTAGRAM</a>
+          <a class="dropdown-item" href="#">DISCORD</a>
+          <a class="dropdown-item" href="#">RATE US ON RMS</a>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
