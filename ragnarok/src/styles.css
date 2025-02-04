@@ -13,6 +13,6 @@
 }
 
 body{
-  background: black url(app/images/background\ 900x675.webp) no-repeat scroll;
+  background: black url(app/images/background\ 1024x768.webp) no-repeat center scroll;
   background-size: cover;
 }
