@@ -36,7 +36,7 @@ span {
   gap: 10px;
 }
 
-#btn-quick-menu > button{
+.btn-quick{
   background-color: black;
   border-radius: 5px;
   color: white;
@@ -44,6 +44,7 @@ span {
   font-weight: bold;
   width: 250px;
   padding: 20px;
+  transition: ease 0.5s;
 }
 
 #btn-quick-menu > button:hover{
@@ -181,4 +182,35 @@ span {
   height: 500px;
   text-align: center;
   padding-top: 30px;
+}
+
+
+@media (min-width: 500px) and (max-width: 1360px) {
+
+  /* Dispositivos pequenos ( Celulares / Tablets ) */
+
+  *{
+    font-size: 1.1em;
+  }
+
+  #server-container{
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #server-container > article{
+    width: 650px;
+    font-size: 0.8em;
+  }
+
+  #welcome-container{
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-content{
+    width: 400px;
+  }
 }

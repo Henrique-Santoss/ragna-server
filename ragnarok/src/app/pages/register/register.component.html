@@ -3,7 +3,7 @@
     <div class="form-container">
       <!-- Cabeçalho -->
       <header class="form-header">
-        <h1>Cadastro</h1>
+        <h1><strong>Cadastro</strong></h1>
         <p>Preencha o formulário abaixo para criar sua conta</p>
       </header>
 
@@ -121,7 +121,7 @@
           </div>
         </div>
 
-        <button type="submit" class="submit-btn">
+        <button (click)="onSubmit()" type="submit" class="submit-btn" routerLink="/account" routerLinkActive="active">
           Cadastrar
         </button>
       </form>

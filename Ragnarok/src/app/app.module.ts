@@ -9,6 +9,9 @@ import { FooterComponent } from './_components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/register/register.component';
+import { AccountPageComponent } from './pages/account-page/account-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { RegisterComponent } from './pages/register/register.component';
     FooterComponent,
     HomeComponent,
     RegisterComponent,
+    AccountPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

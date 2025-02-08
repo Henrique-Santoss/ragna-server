@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Configuração geral da Navbar*/
+
 nav {
   background-color: rgba(0, 0, 0, 0.445);
 }
@@ -166,4 +168,23 @@ ul > li > a:hover {
 .text-decoration-none:hover {
   color: yellowgreen;
   text-decoration: underline;
+}
+
+@media (min-width: 573px) and (max-width: 1200px) {
+  /* Configuração para dispositivos pequenos*/
+
+  .navbar-nav {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .nav-link{
+    text-align: center;
+    width: 530px;
+  }
+
+  .nav-item.destaque{
+    display: none;
+  }
 }

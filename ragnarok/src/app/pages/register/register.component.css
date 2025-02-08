@@ -25,6 +25,7 @@
   margin-bottom: 2rem;
 
   h1 {
+    font-weight: bold;
     font-size: 2rem;
     color: #333;
     margin-bottom: 0.5rem;
@@ -42,7 +43,7 @@
     display: block;
     margin-bottom: 0.5rem;
     color: #333;
-    font-weight: 500;
+    font-weight: bold;
   }
 
   input,
