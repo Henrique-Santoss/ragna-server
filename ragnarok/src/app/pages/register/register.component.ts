@@ -10,10 +10,23 @@ import { User } from '../../_models/user';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
-
   registerForm: FormGroup = new FormGroup({});
 
   constructor(private fb: FormBuilder) {}
+
+  users: User [] = [
+    {
+      username: '',
+      password: '',
+      confirmPassword: '',
+      email: '',
+      confirmEmail: '',
+      gender: '',
+      birthYear: 0,
+      birthMonth: 0,
+      birthDay: 0,
+    },
+  ];
 
   ngOnInit(): void {
     this.initilizeForm();
@@ -25,8 +38,8 @@ export class RegisterComponent implements OnInit {
     this.days = Array.from({length: 31}, (_, i) => i + 1);
 
     this.registerForm = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(4)]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(30)]],
+      password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(30)]],
       confirmPassword: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       confirmEmail: ['', [Validators.required, Validators.email]],
@@ -59,7 +72,5 @@ export class RegisterComponent implements OnInit {
       this.users.push(this.registerForm.value);
       this.registerForm.reset();
     }
-  }
-
-  users: User [] = [];
+  };
 }

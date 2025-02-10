@@ -19,10 +19,10 @@
             aria-required="true"
           />
           <div
-            *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched"
+            *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched || registerForm.get('username')?.hasError('maxlenght')"
             class="error-message"
           >
-            Nome de usuário é obrigatório e deve ter pelo menos 4 caracteres.
+            Nome de usuário é obrigatório e deve ter entre 4 a 30 caracteres.
           </div>
         </div>
 
@@ -36,10 +36,10 @@
             aria-required="true"
           />
           <div
-            *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched"
+            *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched ||registerForm.get('password')?.hasError('maxlenght')"
             class="error-message"
           >
-            A senha é obrigatória e deve ter pelo menos 8 caracteres.
+            A senha é obrigatória e deve ter pelo menos 8 a 30 caracteres.
           </div>
         </div>
 
@@ -121,7 +121,7 @@
           </div>
         </div>
 
-        <button (click)="onSubmit()" type="submit" class="submit-btn" routerLink="/account" routerLinkActive="active">
+        <button [disabled]="!registerForm.valid" (click)="onSubmit()" type="submit" class="submit-btn" routerLink="/account" routerLinkActive="active">
           Cadastrar
         </button>
       </form>

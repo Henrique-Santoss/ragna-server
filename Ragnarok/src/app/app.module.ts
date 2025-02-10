@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/register/register.component';
 import { AccountPageComponent } from './pages/account-page/account-page.component';
+import { UserCardComponent } from './_components/user-card/user-card.component';
 
 
 
@@ -22,6 +23,7 @@ import { AccountPageComponent } from './pages/account-page/account-page.componen
     HomeComponent,
     RegisterComponent,
     AccountPageComponent,
+    UserCardComponent,
   ],
   imports: [
     BrowserModule,
