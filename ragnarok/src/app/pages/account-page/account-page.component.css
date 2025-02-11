@@ -1,18 +1,14 @@
-.background-container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color: #f5f5f55d;
-}
-
 .content-wrapper {
   height: 90vh;
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.596);
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.336) 1px 1px 5px;
+  background-color: white;
+}
+
+.account-info{
+  text-align: center;
+}
+
+.account-info > h2{
+  padding-top: 50px;
 }

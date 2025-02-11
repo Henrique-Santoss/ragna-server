@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../_models/user';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,21 +13,7 @@ import { User } from '../../_models/user';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) {}
-
-  users: User [] = [
-    {
-      username: '',
-      password: '',
-      confirmPassword: '',
-      email: '',
-      confirmEmail: '',
-      gender: '',
-      birthYear: 0,
-      birthMonth: 0,
-      birthDay: 0,
-    },
-  ];
+  constructor(private fb: FormBuilder, route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.initilizeForm();
@@ -66,6 +53,20 @@ export class RegisterComponent implements OnInit {
     { value: 12, label: 'Dezembro' }
   ];
   days: number[] = [];
+
+  users: User [] = [
+    {
+      username: '',
+      password: '',
+      confirmPassword: '',
+      email: '',
+      confirmEmail: '',
+      gender: '',
+      birthYear: 0,
+      birthMonth: 0,
+      birthDay: 0,
+    },
+  ];
 
   onSubmit(): void {
     if (this.registerForm.valid) {

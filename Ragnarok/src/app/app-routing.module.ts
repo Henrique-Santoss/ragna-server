@@ -7,8 +7,8 @@ import { AccountPageComponent } from './pages/account-page/account-page.componen
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redireciona para a página inicial
   { path: 'home', component: HomeComponent }, // Página inicial
-  { path: 'register', component: RegisterComponent}, // Página de Registro
-  { path: 'account', component: AccountPageComponent} // Página da Conta
+  { path: 'users/register', component: RegisterComponent}, // Página de Registro
+  { path: 'users/:username', component: AccountPageComponent} // Página da Conta
 ];
 
 @NgModule({
